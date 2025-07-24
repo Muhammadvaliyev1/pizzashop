@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: linear-gradient(245.71deg, #1E0C00 4.96%, #1F0700 33.7%, #170A00 68.41%, #1E0D00 96.42%);
+}
+
+.manu {
+    background: linear-gradient(245.71deg, #1E0C00 4.96%, #1F0700 33.7%, #170A00 68.41%, #1E0D00 96.42%);
+}
+
+.a1:hover .s1 {
+    width: 100%;
+}
+
+.s1 {
+    width: 0px;
+}
+
+.bglogo {
+    background: linear-gradient(261.69deg, #FF6432 12.12%, #FFA228 86.72%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.alpha:hover {
+    background: linear-gradient(261.69deg, #FF6432 12.12%, #FFA228 86.72%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.alpha:hover .bgafter{
+    display: block;
+    background: linear-gradient(261.69deg, #FF6432 12.12%, #FFA228 86.72%);
+}
+
+.log{
+    background: linear-gradient(261.69deg,#FF6432 0%,#FFA228 50%,#FF6432 100%);
+    background-size: 200%;
+    background-position: left;
+}
+
+.log:hover {
+    background-position: right;
+}
+
+.liner {
+    transform-origin: center;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/lightning.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <title>Pizzashop</title>
+</head>
+<body class="relative gradi min-h-screen opacity-0 transition-opacity duration-300">
+  <header>
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 pt-8 lg:pt-12">
+      <a href="/" class="text-4xl font-extrabold bglogo bg-clip-text">pizzashop</a>
+      <div class="max-w-md w-full mx-auto hidden lg:flex items-center justify-between">
+        <a href="#" class="relative alpha text-Gray text-lg">Home <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">Menu <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">Events <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">About us <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+      </div>
+      <div class="flex items-center justify-between gap-x-6">
+        <div class="flex items-center justify-between gap-x-7">
+          <button type="button" class="hidden lg:block log transition-all duration-300 text-lg font-medium text-white rounded-full px-14 py-2.5">Log in</button>
+          <button type="button" class="log rounded-full px-1.5 py-2">
+            <div>
+              <img src="/img/basket.png" alt="basket">
+            </div>
+          </button>
+        </div>
+        <button id="menuToggle" class="relative w-10 h-6 flex lg:hidden flex-col justify-between items-center z-50">
+          <span class="line absolute top-0.5 w-7 h-0.5 rounded-full bg-gradient-to-r from-[#FF6432] to-[#FFA228] transition-all duration-300 ease-in-out"></span>
+          <span class="line absolute top-1/2 -translate-y-1/2 w-7 h-0.5 rounded-full bg-gradient-to-r from-[#FF6432] to-[#FFA228] transition-all duration-300 ease-in-out"></span>
+          <span class="line absolute bottom-0.5 w-7 h-0.5 rounded-full bg-gradient-to-r from-[#FF6432] to-[#FFA228] transition-all duration-300 ease-in-out"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="menu" class="manu absolute transition-all duration-500 -left-full -translate-x-1/2 max-w-5xl flex flex-col items-center-center justify-between w-full h-screen space-y-5 top-0 pt-20 pb-8">
+    <div class="max-w-20 text-center space-y-5 w-full mx-auto">
+        <a href="#" class="relative alpha text-Gray text-lg">Home <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">Menu <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">Events <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+        <a href="#" class="relative alpha text-Gray text-lg">About us <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
+    </div>
+    <button type="button" class="mx-auto block log transition-all duration-300 text-lg font-medium text-white rounded-full px-14 py-2.5">Log in</button>
+  </div>
+  <script src="./app.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.remove('opacity-0');
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
