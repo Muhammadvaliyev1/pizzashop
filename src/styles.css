@@ -47,3 +47,11 @@ body {
 .liner {
     transform-origin: center;
 }
+
+.playfath {
+    background: linear-gradient(261.69deg, #FF6432 12.12%, #FFA228 86.72%);
+}
+.playmath {
+    width: 76px;
+    height: 76px;
+}
