@@ -29,34 +29,41 @@ const button = document.getElementById('menuToggle');
   });
 
   const toggleBtn = document.getElementById('toggleBtn');
-    const slider = document.getElementById('slider');
-    const left = document.getElementById('left');
-    const right = document.getElementById('right');
+const slider = document.getElementById('slider');
+const left = document.getElementById('left');
+const right = document.getElementById('right');
 
-    let isLeftActive = true;
+let isLeftActive = true;
 
-    toggleBtn.addEventListener('click', () => {
-      isLeftActive = !isLeftActive;
+toggleBtn.addEventListener('click', () => {
+  isLeftActive = !isLeftActive;
 
-      if (isLeftActive) {
-        slider.classList.remove('left-[41%]');
-        slider.classList.add('left-0');
+  const parentWidth = toggleBtn.offsetWidth;
+  const sliderWidth = slider.offsetWidth;
 
-        left.classList.replace('text-orange-400', 'text-white',);
-        right.classList.replace('text-white', 'text-orange-400');
-        left.classList.replace('text-lg', 'text-2xl',);
-        right.classList.replace('text-2xl', 'text-lg');
-        left.classList.replace('ml-0', 'ml-6',);
-        right.classList.replace('mr-6', 'mr-0');
-      } else {
-        slider.classList.remove('left-0');
-        slider.classList.add('left-[41%]');
+  const rightPosition = parentWidth - sliderWidth;
 
-        left.classList.replace('text-white', 'text-orange-400',);
-        right.classList.replace('text-orange-400', 'text-white',);
-        left.classList.replace('text-2xl', 'text-lg',);
-        right.classList.replace('text-lg', 'text-2xl');
-        left.classList.replace('ml-6', 'ml-0');
-        right.classList.replace('mr-0', 'mr-6',);
-      }
-    });
+  if (isLeftActive) {
+    slider.style.left = '0px';
+
+    left.classList.replace('text-orange-400', 'text-white');
+    right.classList.replace('text-white', 'text-orange-400');
+
+    left.classList.replace('text-lg', 'text-2xl');
+    right.classList.replace('text-2xl', 'text-lg');
+
+    left.classList.replace('ml-0', 'ml-3 md:ml-6');
+    right.classList.replace('mr-3 md:mr-6', 'mr-0');
+  } else {
+    slider.style.left = `${rightPosition}px`;
+
+    left.classList.replace('text-white', 'text-orange-400');
+    right.classList.replace('text-orange-400', 'text-white');
+
+    left.classList.replace('text-2xl', 'text-lg');
+    right.classList.replace('text-lg', 'text-2xl');
+
+    left.classList.replace('ml-3 md:ml-6', 'ml-0');
+    right.classList.replace('mr-0', 'mr-3 md:mr-6');
+  }
+});

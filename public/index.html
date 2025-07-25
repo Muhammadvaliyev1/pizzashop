@@ -41,62 +41,82 @@
 
   <main class="pt-16">
     <section>
-      <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
-        <div class="pt-14">
-          <h1 class="max-w-xl text-white text-7xl font-extrabold">
+      <div class="relative max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-x-5 px-6">
+        <div class="relative pt-14">
+          <div class="absolute hidden lg:block -bottom-24 -right-8 z-20">
+            <img src="./img/arrow2.png" alt="arrow">
+          </div>
+          <h1 class="max-w-xl text-white text-[40px] sm:leading-[1px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold">
             <span class="flex items-center justify-start gap-x-4">
-              The Fastest<div class="pt-7"><img src="/public/img/arrow.png" alt="arrow"></div>
+              The Fastest<div class="pt-7"><img class="hidden md:block" src="/public/img/arrow.png" alt="arrow"></div>
             </span>
             <span class="flex items-center gap-2">
               Pizza
-              <img src="./img/lightning.png" alt="bolt icon" class="w-12 h-20 inline-block mt-5">
+              <img src="./img/lightning.png" alt="bolt icon" class="w-8 h-16 lg:w-12 lg:h-20 inline-block sm:mt-3 lg:mt-5">
               Delivery
             </span>
           </h1>
-          <p class="max-w-md text-Gray text-xl mt-7">
+          <p class="max-w-md text-Gray text-sm sm:text-base md:text-xl mt-2 sm:mt-4 md:mt-7">
             We will deliver juicy pizza for your family in 30 minutes, if the courier is late - <span class="text-white">pizza is free!</span>
           </p>
           <div class="mt-6">
-            <p class="text-Gray">
-              Cooking process:
-            </p>
-            <div class="relative max-w-[272px] mt-3">
-              <div class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                <button type="button">
-                  <div class="w-20 h-20 py-0.5 playfath rounded-full">
-                    <div class="relative playmath rounded-full bg-black mx-auto">
-                      <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                        <img src="./img/play.png" alt="play">
-                      </div>
+            <div class="relative flex flex-col md:flex-col-reverse mt-8 md:mt-3">
+                <div class="relative w-[95%] max-w-[388px] h-[44px] sm:h-[62px] rounded-full border border-orange-500 overflow-hidden cursor-pointer transition-all duration-500 md:mt-8" id="toggleBtn">
+                  <!-- Animated background -->
+                  <div id="slider" class="absolute top-0 left-0 w-[180px] sm:w-[229px] h-full bg-gradient-to-r from-orange-500 to-orange-400 transition-all duration-500 rounded-full"></div>
+
+                  <!-- Labels -->
+                  <div class="relative z-10 flex w-full h-full">
+                    <div id="left" class="flex-1 flex items-center justify-center text-white text-2xl font-medium transition-all duration-500 md:ml-6">
+                      To order
+                    </div>
+                    <div id="right" class="flex-1 flex items-center justify-center text-orange-400 text-lg font-medium transition-all duration-500 mr-0">
+                      Pizza–Menu
                     </div>
                   </div>
-                </button>
-              </div>
-              <div class="relative w-72 h-48 rounded-3xl overflow-hidden z-10">
-                <img class="w-full h-full object-cover opacity-40" src="./img/pizzavd.jpg" alt="video">
-              </div>
-            </div>
-          </div>
-          <div class="relative w-[388px] h-[62px] rounded-full border border-orange-500 overflow-hidden cursor-pointer transition-all duration-500 mt-8" id="toggleBtn">
-            <!-- Animated background -->
-            <div id="slider" class="absolute top-0 left-0 w-[229px] h-full bg-gradient-to-r from-orange-500 to-orange-400 transition-all duration-500 rounded-full"></div>
-
-            <!-- Labels -->
-            <div class="relative z-10 flex w-full h-full">
-              <div id="left" class="flex-1 flex items-center justify-center text-white text-2xl font-medium transition-all duration-500 ml-6">
-                To order
-              </div>
-              <div id="right" class="flex-1 flex items-center justify-center text-orange-400 text-lg font-medium transition-all duration-500 mr-0">
-                Pizza–Menu
-              </div>
+                </div>
+                <div class="mt-8 md:mt-0">
+                  <p class="text-Gray text-sm md:text-base">
+                    Cooking process:
+                  </p>
+                  <div class="relative max-w-[272px] mt-2 md:mt-3">
+                    <div class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                      <button type="button">
+                        <div class="w-20 h-20 py-0.5 playfath rounded-full">
+                          <div class="relative playmath rounded-full bg-black mx-auto">
+                            <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                              <img src="./img/play.png" alt="play">
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="relative w-72 h-48 rounded-3xl overflow-hidden z-10">
+                      <img class="w-full h-full object-cover opacity-40" src="./img/pizzavd.jpg" alt="video">
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
+        <div class="relative max-w-xl lg:mt-0">
+          <div class="relative max-w-60 sm:max-w-96 md:max-w-xl rounded-3xl z-10">
+            <img class="w-full h-full" src="./img/prewiev.png" alt="prewiev">
+          </div>
+          <div class="absolute z-20 -top-5 sm:-top-6 md:top-0 -right-9 sm:-right-10 md:-right-14">
+            <img class="w-24 sm:w-32 md:w-fit h-24 sm:h-32 md:h-full" src="./img/piceofpizza.png" alt="pizza">
+          </div>
+          <div class="absolute -left-16 sm:-left-20 md:-left-16 bottom-0 sm:-bottom-5 md:bottom-0 z-20">
+            <img class="hidden sm:block sm:w-[80px] md:w-fit sm:h-[60px] md:h-full" src="./img/free.png" alt="potato free bottom-0">
+            <img class="block sm:hidden" src="./img/fries.png" alt="free">
+          </div>
+        </div>  
       </div>
     </section>
+    <section class=""></section>
   </main>
 
-  <div id="menu" class="manu absolute transition-all duration-500 -left-full -translate-x-1/2 max-w-5xl flex flex-col items-center-center justify-between w-full h-screen space-y-5 top-0 pt-20 pb-8">
+  <div id="menu" class="manu absolute z-30 transition-all duration-500 -left-full -translate-x-1/2 max-w-5xl flex flex-col items-center-center justify-between w-full h-screen space-y-5 top-0 pt-20 pb-8">
     <div class="max-w-20 text-center space-y-5 w-full mx-auto">
         <a href="#" class="relative alpha text-Gray text-lg">Home <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
         <a href="#" class="relative alpha text-Gray text-lg">Menu <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-1.5 h-1.5 rounded-full bgafter"></div></a>
