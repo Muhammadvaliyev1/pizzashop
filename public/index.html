@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
   <title>Pizzashop</title>
 </head>
 <body class="relative gradi min-h-screen opacity-0 transition-opacity duration-300">
@@ -100,20 +101,254 @@
           </div>
         </div>
         <div class="relative max-w-xl lg:mt-0">
-          <div class="relative max-w-60 sm:max-w-96 md:max-w-xl rounded-3xl z-10">
+          <div class="relative max-w-60 base:max-w-96 md:max-w-xl rounded-3xl z-10">
             <img class="w-full h-full" src="./img/prewiev.png" alt="prewiev">
           </div>
-          <div class="absolute z-20 -top-5 sm:-top-6 md:top-0 -right-9 sm:-right-10 md:-right-14">
+          <div class="absolute z-20 -top-5 sm:-top-6 md:top-0 -right-9 sm:-right-10">
             <img class="w-24 sm:w-32 md:w-fit h-24 sm:h-32 md:h-full" src="./img/piceofpizza.png" alt="pizza">
           </div>
-          <div class="absolute -left-16 sm:-left-20 md:-left-16 bottom-0 sm:-bottom-5 md:bottom-0 z-20">
-            <img class="hidden sm:block sm:w-[80px] md:w-fit sm:h-[60px] md:h-full" src="./img/free.png" alt="potato free bottom-0">
-            <img class="block sm:hidden" src="./img/fries.png" alt="free">
+          <div class="absolute -left-10 sm:-left-8 md:-left-16 -bottom-7 base:-bottom-5 md:-bottom-8 z-20">
+            <img class="block w-[115px] md:w-fit h-[125px] md:h-fit" src="./img/free.png" alt="potato free bottom-0">
+            <img class="hidden" src="./img/fries.png" alt="free">
           </div>
         </div>  
       </div>
     </section>
-    <section class=""></section>
+    <section>
+      <div class="max-w-7xl mx-auto px-6 pt-16">
+        <h2 class="text-7xl font-extrabold text-white text-center">Menu</h2>
+        <div class="mt-12">
+          <label class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center lg:justify-between">
+            <button id="showAll" type="button" class="filltr">Show All</button>
+            <label class="block">
+              <input id="piz" type="checkbox" value="meat" class="filter peer hidden"/>
+              <div class="filltr peer-checked:bg-liner bg-gray-200 p-4 rounded cursor-pointer transition-colors">
+                <h3>Meat</h3>
+              </div>
+            </label>
+            <label class="block">
+              <input id="piz" type="checkbox" value="veget" class="filter peer hidden"/>
+              <div class="filltr peer-checked:bg-liner bg-gray-200 p-4 rounded cursor-pointer transition-colors">
+                <h3>Vegetariant</h3>
+              </div>
+            </label>
+            <label class="block">
+              <input id="piz" type="checkbox" value="sea" class="filter peer hidden"/>
+              <div class="filltr peer-checked:bg-liner bg-gray-200 p-4 rounded cursor-pointer transition-colors">
+                <h3>Sea products</h3>
+              </div>
+            </label>
+            <label class="block">
+              <input id="piz" type="checkbox" value="mushroom" class="filter peer hidden"/>
+              <div class="filltr peer-checked:bg-liner bg-gray-200 p-4 rounded cursor-pointer transition-colors">
+                <h3>Mushroom</h3>
+              </div>
+            </label>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-x-5 gap-y-16 mt-28">
+            <div class="relative product rounded-3xl bg-darkChoco pt-28 pb-6" data-category="meat">
+              <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[200px] h-[197px]">
+                <img class="w-full h-full object-cover" src="./img/italian.png" alt="italiano">
+              </div>
+              <div class="space-y-5">
+                <h3 class="text-white text-2xl font-medium text-center">Italian</h3>
+                <p class="max-w-56 mx-auto text-Gray text-sm">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...
+                </p>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <label>
+                    <input class="peer hidden" name="sizeItalia" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">22</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeItalia" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">28</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeItalia" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">33</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="max-w-xm mx-auto w-full">
+                  <button class="w-full border border-orange-400 rounded-3xl text-orange-400 py-2.5">+ Ingridients</button> 
+                </div>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <h4 class="text-2xl font-medium text-white">8,35 <sup class="text-base font-bold font-DMSans">$</sup></h4>
+                  <div class="flex items-center space-x-4 text-white bg-[#210A01] p-4 rounded">
+                    <!-- Minus button -->
+                    <button id="decrease" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">−</button>
+
+                    <!-- Count -->
+                    <span id="count" class="text-gray-200 text-xl font-semibold">1</span>
+
+                    <!-- Plus button -->
+                    <button id="increase" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">+</button>
+                  </div>
+                </div>
+                <div class="max-w-xm mx-auto">
+                  <button type="button" class="w-full text-white font-medium bg-liner rounded-3xl py-3.5">Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="relative product rounded-3xl bg-darkChoco pt-28 pb-6" data-category="veget">
+              <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[200px] h-[197px]">
+                <img class="w-full h-full object-cover" src="./img/venecia.png" alt="venecia">
+              </div>
+              <div class="space-y-5">
+                <h3 class="text-white text-2xl font-medium text-center">Venecia</h3>
+                <p class="max-w-56 mx-auto text-Gray text-sm">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...
+                </p>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <label>
+                    <input class="peer hidden" name="sizeVeni" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">22</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeVeni" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">28</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeVeni" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">33</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="max-w-xm mx-auto w-full">
+                  <button class="w-full border border-orange-400 rounded-3xl text-orange-400 py-2.5">+ Ingridients</button> 
+                </div>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <h4 class="text-2xl font-medium text-white">8,35 <sup class="text-base font-bold font-DMSans">$</sup></h4>
+                  <div class="flex items-center space-x-4 text-white bg-[#210A01] p-4 rounded">
+                    <!-- Minus button -->
+                    <button id="2decrease" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">−</button>
+
+                    <!-- Count -->
+                    <span id="2count" class="text-gray-200 text-xl font-semibold">1</span>
+
+                    <!-- Plus button -->
+                    <button id="2increase" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">+</button>
+                  </div>
+                </div>
+                <div class="max-w-xm mx-auto">
+                  <button type="button" class="w-full text-white font-medium bg-liner rounded-3xl py-3.5">Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="relative product rounded-3xl bg-darkChoco pt-28 pb-6" data-category="sea">
+              <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[200px] h-[197px]">
+                <img class="w-full h-full object-cover" src="./img/meat.png" alt="meat">
+              </div>
+              <div class="space-y-5">
+                <h3 class="text-white text-2xl font-medium text-center">Meat</h3>
+                <p class="max-w-56 mx-auto text-Gray text-sm">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...
+                </p>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <label>
+                    <input class="peer hidden" name="sizeMeat" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">22</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeMeat" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">28</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeMeat" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">33</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="max-w-xm mx-auto w-full">
+                  <button class="w-full border border-orange-400 rounded-3xl text-orange-400 py-2.5">+ Ingridients</button> 
+                </div>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <h4 class="text-2xl font-medium text-white">8,35 <sup class="text-base font-bold font-DMSans">$</sup></h4>
+                  <div class="flex items-center space-x-4 text-white bg-[#210A01] p-4 rounded">
+                    <!-- Minus button -->
+                    <button id="3decrease" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">−</button>
+
+                    <!-- Count -->
+                    <span id="3count" class="text-gray-200 text-xl font-semibold">1</span>
+
+                    <!-- Plus button -->
+                    <button id="3increase" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">+</button>
+                  </div>
+                </div>
+                <div class="max-w-xm mx-auto">
+                  <button type="button" class="w-full text-white font-medium bg-liner rounded-3xl py-3.5">Order Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="relative product rounded-3xl bg-darkChoco pt-28 pb-6" data-category="mushroom">
+              <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[200px] h-[197px]">
+                <img class="w-full h-full object-cover" src="./img/cheese.png" alt="cheese">
+              </div>
+              <div class="space-y-5">
+                <h3 class="text-white text-2xl font-medium text-center">Cheese</h3>
+                <p class="max-w-56 mx-auto text-Gray text-sm">
+                  Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...
+                </p>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <label>
+                    <input class="peer hidden" name="sizeCheeze" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">22</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeCheeze" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">28</p>
+                    </div>
+                  </label>
+                  <label>
+                    <input class="peer hidden" name="sizeCheeze" type="radio">
+                    <div class="peer-checked:text-white text-Gray  peer-checked:bg-liner peer-checked:border-transparent flex items-center justify-center w-10 h-10 rounded-full border border-Gray">
+                      <p class="text-sm">33</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="max-w-xm mx-auto w-full">
+                  <button class="w-full border border-orange-400 rounded-3xl text-orange-400 py-2.5">+ Ingridients</button> 
+                </div>
+                <div class="max-w-xm mx-auto flex items-center justify-between">
+                  <h4 class="text-2xl font-medium text-white">8,35 <sup class="text-base font-bold font-DMSans">$</sup></h4>
+                  <div class="flex items-center space-x-4 text-white bg-[#210A01] p-4 rounded">
+                    <!-- Minus button -->
+                    <button id="4decrease" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">−</button>
+
+                    <!-- Count -->
+                    <span id="4count" class="text-gray-200 text-xl font-semibold">1</span>
+
+                    <!-- Plus button -->
+                    <button id="4increase" class="btn w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full">+</button>
+                  </div>
+                </div>
+                <div class="max-w-xm mx-auto">
+                  <button type="button" class="w-full text-white font-medium bg-liner rounded-3xl py-3.5">Order Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
   </main>
 
   <div id="menu" class="manu absolute z-30 transition-all duration-500 -left-full -translate-x-1/2 max-w-5xl flex flex-col items-center-center justify-between w-full h-screen space-y-5 top-0 pt-20 pb-8">

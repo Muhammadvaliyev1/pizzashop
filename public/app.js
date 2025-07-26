@@ -67,3 +67,105 @@ toggleBtn.addEventListener('click', () => {
     right.classList.replace('mr-0', 'mr-3 md:mr-6');
   }
 });
+
+const decreaseBtn = document.getElementById('decrease');
+  const increaseBtn = document.getElementById('increase');
+  const countSpan = document.getElementById('count');
+
+  let count = 1;
+
+  function flashButton(button) {
+    // Сохраняем оригинальные классы
+    const originalClass = button.className;
+
+    // Добавляем временный градиент
+    button.classList.remove('border', 'border-gray-400');
+    button.classList.add('bg-gradient-to-r', 'from-orange-500', 'to-red-500');
+
+    // Вернуть через 300мс
+    setTimeout(() => {
+      button.className = originalClass;
+    }, 300);
+  }
+
+  decreaseBtn.addEventListener('click', () => {
+    if (count > 0) {
+      count--;
+      countSpan.textContent = count;
+      flashButton(decreaseBtn);
+    }
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    count++;
+    countSpan.textContent = count;
+    flashButton(increaseBtn);
+  });
+
+  const SecdecreaseBtn = document.getElementById('2decrease');
+  const SecincreaseBtn = document.getElementById('2increase');
+  const SeccountSpan = document.getElementById('2count');
+
+  let Seccount = 1;
+
+  function SecflashButton(button) {
+    // Сохраняем оригинальные классы
+    const originalClass = button.className;
+
+    // Добавляем временный градиент
+    button.classList.remove('border', 'border-gray-400');
+    button.classList.add('bg-gradient-to-r', 'from-orange-500', 'to-red-500');
+
+    // Вернуть через 300мс
+    setTimeout(() => {
+      button.className = originalClass;
+    }, 300);
+  }
+
+  SecdecreaseBtn.addEventListener('click', () => {
+    if (count > 0) {
+      count--;
+      countSpan.textContent = count;
+      flashButton(decreaseBtn);
+    }
+  });
+
+  SecincreaseBtn.addEventListener('click', () => {
+    count++;
+    countSpan.textContent = count;
+    flashButton(increaseBtn);
+  });
+
+
+  //FILTR
+
+  const checkboxes = document.querySelectorAll('.filter');
+  const products = document.querySelectorAll('.product');
+  const showAllBtn = document.getElementById('showAll');
+
+  // Функция для фильтрации
+  function filterProducts() {
+    const selected = Array.from(checkboxes)
+                          .filter(cb => cb.checked)
+                          .map(cb => cb.value);
+
+    products.forEach(product => {
+      const category = product.dataset.category;
+      if (selected.length === 0 || selected.includes(category)) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Вешаем событие на каждый чекбокс
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', filterProducts);
+  });
+
+  // Кнопка "Показать всё"
+  showAllBtn.addEventListener('click', () => {
+    checkboxes.forEach(cb => cb.checked = false); // снять все галочки
+    products.forEach(product => product.style.display = 'block'); // показать все
+  });
